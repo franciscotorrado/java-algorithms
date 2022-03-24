@@ -1,7 +1,6 @@
-package algorithms;
+package org.pacotorrado.algorithms;
 
 import org.junit.jupiter.api.Test;
-import org.pacotorrado.algorithms.RomanToInteger;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 

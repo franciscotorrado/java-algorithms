@@ -1,34 +1,31 @@
 package org.pacotorrado.algorithms;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class RomanToInteger {
 
     public int romanToInt(String s) {
-        int total = 0;
-        String[] splitString = s.split("");
-        Letters lastLetter = null;
-        for (String nextLetter : splitString) {
-            final Letters letter = Letters.valueOf(nextLetter);
-            if (lastLetter != null && (lastLetter.getValue() < letter.getValue())) {
-                total = total - 2 * lastLetter.getValue() + letter.getValue();
+        Map<Character, Integer> letters = new HashMap<>();
+        letters.put('I', 1);
+        letters.put('V', 5);
+        letters.put('X', 10);
+        letters.put('L', 50);
+        letters.put('C', 100);
+        letters.put('D', 500);
+        letters.put('M', 1000);
+
+        int result = 0;
+
+        for (int i = 0; i < s.length(); i++) {
+            final int nextValue = letters.get(s.charAt(i));
+            if (i < s.length() - 1 && nextValue < letters.get(s.charAt(i + 1))) {
+                result -= nextValue;
             } else {
-                total += letter.getValue();
-                lastLetter = letter;
+                result += nextValue;
             }
         }
-        return total;
-    }
 
-    enum Letters {
-        I(1), V(5), X(10), L(50), C(100), D(500), M(1000);
-
-        private final int value;
-
-        Letters(final int value) {
-            this.value = value;
-        }
-
-        int getValue() {
-            return value;
-        }
+        return result;
     }
 }
