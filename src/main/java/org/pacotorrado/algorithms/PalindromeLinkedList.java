@@ -8,7 +8,16 @@ public class PalindromeLinkedList {
             return true;
         }
 
-        ListNode currentNode = head;
+        ListNode fastNode = head;
+        ListNode slowNode = head;
+
+        while (fastNode != null) {
+            if(fastNode.next == null) break;
+            fastNode = fastNode.next.next;
+            slowNode = slowNode.next;
+        }
+
+        ListNode currentNode = slowNode;
         ListNode previousNode = null;
         ListNode newNode = null;
 
