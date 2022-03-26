@@ -13,6 +13,7 @@ public class RansomNoteTest {
         String ransomNote = "a";
         String magazine = "b";
         assertFalse(ransomNoteChecker.canConstruct(ransomNote, magazine));
+        assertFalse(ransomNoteChecker.canConstructByFrequency(ransomNote, magazine));
     }
 
     @Test
@@ -20,6 +21,7 @@ public class RansomNoteTest {
         String ransomNote = "aa";
         String magazine = "ab";
         assertFalse(ransomNoteChecker.canConstruct(ransomNote, magazine));
+        assertFalse(ransomNoteChecker.canConstructByFrequency(ransomNote, magazine));
     }
 
     @Test
@@ -27,6 +29,7 @@ public class RansomNoteTest {
         String ransomNote = "aa";
         String magazine = "aab";
         assertTrue(ransomNoteChecker.canConstruct(ransomNote, magazine));
+        assertTrue(ransomNoteChecker.canConstructByFrequency(ransomNote, magazine));
     }
 
     @Test
@@ -34,6 +37,7 @@ public class RansomNoteTest {
         String ransomNote = "aa";
         String magazine = "aba";
         assertTrue(ransomNoteChecker.canConstruct(ransomNote, magazine));
+        assertTrue(ransomNoteChecker.canConstructByFrequency(ransomNote, magazine));
     }
 
     @Test
@@ -41,5 +45,6 @@ public class RansomNoteTest {
         String ransomNote = "au";
         String magazine = "abu";
         assertTrue(ransomNoteChecker.canConstruct(ransomNote, magazine));
+        assertTrue(ransomNoteChecker.canConstructByFrequency(ransomNote, magazine));
     }
 }

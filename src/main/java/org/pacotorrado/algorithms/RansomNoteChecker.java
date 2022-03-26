@@ -20,4 +20,26 @@ public class RansomNoteChecker {
 
         return true;
     }
+
+    boolean canConstructByFrequency(final String ransomNote,
+                                    final String magazine) {
+        if (magazine == null) { return false; }
+        if (magazine.length() < ransomNote.length()) { return false; }
+        int[] freq = new int[26];
+
+        for (int i = 0; i < ransomNote.length(); i++) {
+            freq[ransomNote.charAt(i) - 'a']++;
+        }
+        for (int i = 0; i < magazine.length(); i++) {
+            final int letterFrequency = magazine.charAt(i) - 'a';
+            if (freq[letterFrequency] != 0) {
+                freq[letterFrequency]--;
+            }
+        }
+        for (final int j : freq) {
+            if (j != 0) return false;
+        }
+
+        return true;
+    }
 }
