@@ -13,3 +13,4 @@ List of Algorithms
 - [383 - Ransom Note](src/main/java/org/pacotorrado/algorithms/RansomNoteChecker.java) 
 - [412 - Fizz Buzz](src/main/java/org/pacotorrado/algorithms/FizzBuzz.java) 
 - [876 - Middle of the Linked List](src/main/java/org/pacotorrado/algorithms/MiddleOfTheLinkedList.java) 
+- [1337 - The K Weakest Rows in a Matrix](src/main/java/org/pacotorrado/algorithms/TheKWeakestRowsInAMatrix.java) 
