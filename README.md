@@ -14,3 +14,4 @@ List of Algorithms
 - [412 - Fizz Buzz](src/main/java/org/pacotorrado/algorithms/FizzBuzz.java) 
 - [876 - Middle of the Linked List](src/main/java/org/pacotorrado/algorithms/MiddleOfTheLinkedList.java) 
 - [1337 - The K Weakest Rows in a Matrix](src/main/java/org/pacotorrado/algorithms/TheKWeakestRowsInAMatrix.java) 
+- [1342 - Number of Steps to Reduce a Number to Zero](src/main/java/org/pacotorrado/algorithms/NumberOfStepsToReduceANumberToZero.java) 
